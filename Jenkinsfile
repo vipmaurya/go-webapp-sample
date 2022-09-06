@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'docker build -t adminturneddevops/go-webapp-sample .'
+        image = docker.build("adminturneddevops/go-webapp-sample")
+        sh "docker run -p 8090:8000 -d adminturneddevops/go-webapp-sample"
       }
     }
   }
