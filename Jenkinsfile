@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('dev') {
       steps {
-        sh 'docker build -t https://kodekloud.com/topic/lab-building-a-cd-pipeline/ ./...'
+        sh 'docker build -t adminturneddevops/go-webapp-sample ./...'
       }
     }
 
